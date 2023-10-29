@@ -1,6 +1,17 @@
 class Api::V1::AuthenticationController < ApplicationController
   skip_before_action :verify_authenticity_token
 
+  def login
+    user = User.find_by(username: params[:username])
+
+    if user&.authenticate(params[:password])
+      token = encode_token(user.id)
+      render json: { token: token }
+    else
+      render json: { error: "Invalid username or password" }, status: :unauthorized
+    end
+  end
+
   def register
     user = User.new(username: params[:username], password: params[:password])
 
