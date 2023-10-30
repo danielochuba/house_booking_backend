@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_user
+    @current_user
+  end
+
   def decode_token(token)
     JWT.decode(token, Rails.application.secrets.secret_key_base)
   end
