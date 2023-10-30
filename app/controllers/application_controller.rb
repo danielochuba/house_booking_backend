@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
       @current_user = User.find_by(id: user_id)
     end
   end
+
+  def decode_token(token)
+    JWT.decode(token, Rails.application.secrets.secret_key_base)
+  end
 end
