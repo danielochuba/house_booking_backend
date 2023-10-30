@@ -12,7 +12,11 @@ gem 'sprockets-rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use postgresql as the database for Active Record
+gem 'bcrypt'
+gem 'devise'
+gem 'jwt'
 gem 'pg', '~> 1.1'
+gem 'rack-cors'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
