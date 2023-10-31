@@ -1,7 +1,10 @@
 class Api::V1::HousesController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :authenticate
-
+  def index
+    @houses = House.all
+    render json: @houses
+  end
   def create
     house = House.new(house_params)
 
