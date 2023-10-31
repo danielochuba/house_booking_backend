@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       post "/auth/register", to: "authentication#register"
 
       resources :houses, only: [:create]
-
+      resources :house_bookings, only: [:index], path: 'reservations'
     end
   end
 end
