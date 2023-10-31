@@ -10,8 +10,13 @@ class Api::V1::HouseBookingsController < ApplicationController
   end
 
   def index
-    @bookings = HouseBooking.all
+    if current_user
+    @bookings = HouseBooking.where(user_id: current_user.id)
     render json: @bookings
+    else
+      @bookings = HouseBooking.all
+      render json: @bookings
+    end
   end
 
   private
