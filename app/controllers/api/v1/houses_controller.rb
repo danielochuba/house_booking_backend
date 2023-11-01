@@ -5,6 +5,7 @@ class Api::V1::HousesController < ApplicationController
     @houses = House.all
     render json: @houses
   end
+
   def create
     house = House.new(house_params)
 
@@ -19,13 +20,17 @@ class Api::V1::HousesController < ApplicationController
     house = House.find_by(id: params[:id])
 
     if house
-      if house.destroy
-        render json: { message: "House deleted successfully" }
+      if house.user_id == current_user.id
+        if house.destroy
+          render json: { message: 'House deleted successfully' }
+        else
+          render json: { error: 'Failed to delete the house' }, status: :unprocessable_entity
+        end
       else
-        render json: { error: "Failed to delete the house" }, status: :unprocessable_entity
+        render json: { message: 'You are not authorized to delete this house' }
       end
     else
-      render json: { error: "House not found" }, status: :not_found
+      render json: { error: 'House not found' }, status: :not_found
     end
   end
 
