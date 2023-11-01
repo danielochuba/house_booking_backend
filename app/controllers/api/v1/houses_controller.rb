@@ -1,9 +1,19 @@
 class Api::V1::HousesController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :authenticate
+
   def index
     @houses = House.all
     render json: @houses
+  end
+
+  def show
+    house = House.find(params[:id])
+    if house
+      render json: house, status: :success
+    else
+      render json: house.errors, status: :unprocessable_entity
+    end
   end
 
   def create
@@ -13,6 +23,16 @@ class Api::V1::HousesController < ApplicationController
       render json: house, status: :created
     else
       render json: house.errors, status: :unprocessable_entity
+    end
+  end
+
+  def find_by_name
+    house = House.find_by(name: params[:name])
+
+    if house
+      render json: house, status: :ok
+    else
+      render json: { error: 'House not found' }, status: :not_found
     end
   end
 
