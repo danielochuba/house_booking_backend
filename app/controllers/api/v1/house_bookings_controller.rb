@@ -29,7 +29,7 @@ class Api::V1::HouseBookingsController < ApplicationController
       :start_date
     ).merge(
       user_id: current_user.id,
-      price: calculate_total_price(house),
+      price: calculate_total_price(house)
     )
   end
 

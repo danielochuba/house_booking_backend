@@ -32,7 +32,7 @@ class Api::V1::HousesController < ApplicationController
     if house
       render json: house, status: :ok
     else
-      render json: { error: "House not found" }, status: :not_found
+      render json: { error: 'House not found' }, status: :not_found
     end
   end
 
