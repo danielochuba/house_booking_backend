@@ -1,4 +1,6 @@
 class Api::V1::HouseBookingsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  before_action :authenticate
   def create
     @booking = HouseBooking.new(booking_params)
 
