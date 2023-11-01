@@ -1,4 +1,6 @@
 class Api::V1::HouseBookingsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  before_action :authenticate
   def create
     @booking = HouseBooking.new(booking_params)
 
@@ -11,10 +13,7 @@ class Api::V1::HouseBookingsController < ApplicationController
 
   def index
     if current_user
-    @bookings = HouseBooking.where(user_id: current_user.id)
-    render json: @bookings
-    else
-      @bookings = HouseBooking.all
+      @bookings = HouseBooking.where(user_id: current_user.id)
       render json: @bookings
     end
   end
