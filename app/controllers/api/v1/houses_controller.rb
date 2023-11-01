@@ -5,6 +5,7 @@ class Api::V1::HousesController < ApplicationController
     @houses = House.all
     render json: @houses
   end
+
   def create
     house = House.new(house_params)
 
