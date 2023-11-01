@@ -4,7 +4,8 @@ Rails.application.routes.draw do
       post "/auth/login", to: "authentication#login"
       post "/auth/register", to: "authentication#register"
 
-      resources :houses, only: [:create]
+      resources :houses, only: [:create, :index]
+      resources :house_bookings, only: [:index], path: 'reservations'
     end
   end
 end
