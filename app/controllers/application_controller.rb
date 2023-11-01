@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   def authenticate
-    token = cookies[:token]
+    token = request.headers['Authorization'].split[1]
     return unless token
 
     decoded_token = decode_token(token)
