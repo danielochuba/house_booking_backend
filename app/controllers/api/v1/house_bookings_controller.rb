@@ -26,10 +26,14 @@ class Api::V1::HouseBookingsController < ApplicationController
     params.require(:house_booking).permit(
       :house_id,
       :number_of_days,
-      :start_date
+      :start_date,
+      :house_name,
+      :house_image
     ).merge(
       user_id: current_user.id,
-      price: calculate_total_price(house)
+      price: calculate_total_price(house),
+      house_name: house.name,
+      house_image: house.image
     )
   end
 
