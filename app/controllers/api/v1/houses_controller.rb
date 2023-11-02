@@ -26,6 +26,12 @@ class Api::V1::HousesController < ApplicationController
     end
   end
 
+  def delete_houses
+    @houses = House.where(user_id: current_user.id)
+
+    render json: @houses, status: :ok
+  end
+
   def find_by_name
     house = House.find_by(name: params[:name])
 
