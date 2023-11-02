@@ -36,14 +36,14 @@ class Api::V1::HousesController < ApplicationController
     house = House.find_by(id: params[:id])
 
     if house
-        @house_bookings = HouseBooking.where(house_id: house.id)
-        @house_bookings.destroy_all
+      @house_bookings = HouseBooking.where(house_id: house.id)
+      @house_bookings.destroy_all
 
-        if house.destroy
-          render json: { message: 'House deleted successfully' }
-        else
-          render json: { error: 'Failed to delete the house' }, status: :unprocessable_entity
-        end
+      if house.destroy
+        render json: { message: 'House deleted successfully' }
+      else
+        render json: { error: 'Failed to delete the house' }, status: :unprocessable_entity
+      end
 
     else
       render json: { error: 'House not found' }, status: :not_found
