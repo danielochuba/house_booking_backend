@@ -185,7 +185,7 @@ Original design idea [Murat Korkmaz on Behance](https://www.behance.net/muratk)
 
 - **["How can I see more projects associated with these authors?"]**
 
-   - Check my [@ahmed](https://github.com/danielochuba)
+   - Check my [@danielochuba](https://github.com/danielochuba)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
