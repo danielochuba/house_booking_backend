@@ -91,7 +91,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## LINK TO BACK-END <a name="back-end"></a>
-Link: [Back end](https://github.com/danielochuba/house_booking_backend)
+Link: [Front end](https://github.com/ahmedeid6842/book_an_appointment_frontend)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -124,14 +124,14 @@ Clone this repository to your desired folder:
 Go to your /house_booking_backend folder:
 
 ```sh
-  cd //house_booking_backend
+  cd /house_booking_backend
   bundle install
   rails s
 ```
-- SETUP [Front-end](https://github.com/ahmedeid6842/book_an_appointment_frontend) first
+- SETUP [Front-end](https://github.com/ahmedeid6842/book_an_appointment_frontend) 
 
 ```sh
-  cd //house_booking_frontend
+  cd /book_an_appointment_frontend
   npm install
   npm start
 ```	
