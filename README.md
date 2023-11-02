@@ -90,7 +90,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## LINK TO BACK-END <a name="back-end"></a>
+## LINK TO FRONT-END <a name="back-end"></a>
 Link: [Front end](https://github.com/ahmedeid6842/book_an_appointment_frontend)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
