@@ -131,6 +131,60 @@ paths:
       responses:
         '200':
           description: successful
+  "/api/v1/houses/find_by_name":
+    get:
+      summary: find_by_name house
+      responses:
+        '200':
+          description: successful
+  "/api/v1/houses/{id}/delete_houses":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: delete_houses house
+      responses:
+        '200':
+          description: successful
+  "/api/v1/houses":
+    get:
+      summary: list houses
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create house
+      responses:
+        '200':
+          description: successful
+  "/api/v1/houses/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show house
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete house
+      responses:
+        '200':
+          description: successful
+  "/api/v1/delete_houses":
+    get:
+      summary: delete_houses house
+      responses:
+        '200':
+          description: successful
 servers:
 - url: http://{defaultHost}
   variables:
