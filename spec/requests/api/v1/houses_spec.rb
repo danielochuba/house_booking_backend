@@ -65,4 +65,63 @@ RSpec.describe "api/v1/houses", type: :request do
       end
     end
   end
+
+  path "/api/v1/houses/{id}" do
+    parameter name: "id", in: :path, type: :string, description: "House ID"
+
+    get("show house") do
+      tags "Houses"
+      security [Bearer: []]
+
+      response(200, "successful") do
+        schema type: :object,
+          properties: {
+            id: { type: :integer },
+            name: { type: :string },
+            address: { type: :string },
+            description: { type: :string },
+            price_per_day: { type: :integer },
+            image: { type: :string },
+          }
+
+        run_test!
+      end
+    end
+
+    delete("delete house") do
+      tags "Houses"
+      security [Bearer: []]
+
+      response(200, "successful") do
+        schema type: :object,
+          properties: {
+            message: { type: :string },
+          }
+
+        run_test!
+      end
+    end
+  end
+
+  path "/api/v1/houses/find_by_name" do
+    get("find_by_name house") do
+      tags "Houses"
+      security [Bearer: []]
+      parameter name: :name, in: :query, type: :string, required: true, description: "House name"
+
+      response(200, "successful") do
+        schema type: :object,
+          properties: {
+            id: { type: :integer },
+            name: { type: :string },
+            address: { type: :string },
+            description: { type: :string },
+            price_per_day: { type: :integer },
+            image: { type: :string },
+          }
+
+        run_test!
+      end
+    end
+  end
 end
