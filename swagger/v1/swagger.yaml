@@ -131,57 +131,119 @@ paths:
       responses:
         '200':
           description: successful
-  "/api/v1/houses/find_by_name":
-    get:
-      summary: find_by_name house
-      responses:
-        '200':
-          description: successful
-  "/api/v1/houses/{id}/delete_houses":
-    parameters:
-    - name: id
-      in: path
-      description: id
-      required: true
-      schema:
-        type: string
-    get:
-      summary: delete_houses house
-      responses:
-        '200':
-          description: successful
   "/api/v1/houses":
     get:
       summary: list houses
+      tags:
+      - Houses
+      security:
+      - Bearer: []
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    address:
+                      type: string
+                    description:
+                      type: string
+                    price_per_day:
+                      type: integer
+                    image:
+                      type: string
     post:
       summary: create house
+      tags:
+      - Houses
+      security:
+      - Bearer: []
+      parameters: []
       responses:
-        '200':
+        '201':
           description: successful
+        '422':
+          description: unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                address:
+                  type: string
+                description:
+                  type: string
+                price_per_day:
+                  type: integer
+                image:
+                  type: string
+              required:
+              - name
+              - address
+              - description
+              - price_per_day
+              - image
   "/api/v1/houses/{id}":
     parameters:
     - name: id
       in: path
-      description: id
+      description: House ID
       required: true
       schema:
         type: string
     get:
       summary: show house
+      tags:
+      - Houses
+      security:
+      - Bearer: []
       responses:
         '200':
           description: successful
     delete:
       summary: delete house
+      tags:
+      - Houses
+      security:
+      - Bearer: []
       responses:
         '200':
           description: successful
-  "/api/v1/delete_houses":
+  "/api/v1/houses/delete_houses":
     get:
       summary: delete_houses house
+      tags:
+      - Houses
+      security:
+      - Bearer: []
+      responses:
+        '200':
+          description: successful
+  "/api/v1/houses/find_by_name":
+    get:
+      summary: find_by_name house
+      tags:
+      - Houses
+      security:
+      - Bearer: []
+      parameters:
+      - name: name
+        in: query
+        required: true
+        description: House name
+        schema:
+          type: string
       responses:
         '200':
           description: successful
