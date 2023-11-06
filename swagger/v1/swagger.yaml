@@ -220,16 +220,6 @@ paths:
       responses:
         '200':
           description: successful
-  "/api/v1/houses/delete_houses":
-    get:
-      summary: delete_houses house
-      tags:
-      - Houses
-      security:
-      - Bearer: []
-      responses:
-        '200':
-          description: successful
   "/api/v1/houses/find_by_name":
     get:
       summary: find_by_name house
