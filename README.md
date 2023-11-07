@@ -2,11 +2,8 @@
 
 <div align="center">
 
-<h1><b>House Booking APP</b></h1>
+<h1><b>House Booking APP API</b></h1>
  
-  <img src="./houserent.png" alt="logo" width="200"  height="auto">
-  <br/>
-
 </div>
 
 
@@ -150,6 +147,14 @@ I deployed this project using:<br>[Render](https://www.render.com)
 
 ## 👥 Authors <a name="authors"></a>
 
+> 👤 **Ahmed Eid**
+
+- GitHub: [@ahmedeid](https://github.com/ahmedeid6842)
+
+> 👤 **Gerson Higgins**
+
+- GitHub: [@gersonhiggins](https://github.com/gersonhiggins)
+
 > 👤 **Micronaut Daniel Ochuba Ugochukwu**
 
 - GitHub: [@danielochuba](https://github.com/danielochuba)
@@ -185,7 +190,8 @@ Original design idea [Murat Korkmaz on Behance](https://www.behance.net/muratk)
 
 - **["How can I see more projects associated with these authors?"]**
 
-   - Check my [@danielochuba](https://github.com/danielochuba)
+   - Check my [@danielochuba](https://github.com/danielochuba), [@ahmedeid](https://github.com/ahmedeid6842), [@gersonhiggins](https://github.com/gersonhiggins).
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
