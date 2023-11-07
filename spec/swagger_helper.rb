@@ -16,7 +16,11 @@ RSpec.configure do |config|
     'v1/swagger.yaml' => {
       openapi: '3.0.1',
       info: {
-        title: 'This is swagger tester',
+        title: 'House booking APIs',
+        description: "The House Booking Backend API provides a set of endpoints
+          for managing house bookings. It allows users to search for available houses,
+          make bookings, view booking history, and manage their account information.
+          This API serves as the backend for a house booking application.",
         version: 'v1'
       },
       paths: {},
