@@ -141,7 +141,7 @@ Go to your /house_booking_backend folder:
 
 ### Deployment
 
-I deployed this project using:<br>[Render](https://www.render.com)
+Project deployed this project using:<br>[Render](https://www.heroku.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
