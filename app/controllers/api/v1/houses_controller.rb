@@ -10,7 +10,7 @@ class Api::V1::HousesController < ApplicationController
   def show
     house = House.find(params[:id])
     if house
-      render json: house, status: :success
+      render json: house, status: :ok
     else
       render json: house.errors, status: :unprocessable_entity
     end
@@ -44,7 +44,6 @@ class Api::V1::HousesController < ApplicationController
       else
         render json: { error: 'Failed to delete the house' }, status: :unprocessable_entity
       end
-
     else
       render json: { error: 'House not found' }, status: :not_found
     end
