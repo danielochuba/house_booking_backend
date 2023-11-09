@@ -15,6 +15,7 @@
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
     - [LINK TO FRONT-END](#back-end)
+  - [Kanban Board](#kanban-board)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -95,6 +96,13 @@ Link: [Front end](https://github.com/ahmedeid6842/book_an_appointment_frontend)
 - [lIVE DEMO](https://houses-booking-8105175e8e55.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## KanBan Board <a name="kanban-board"></a>
+
+- [kanban Board](https://github.com/users/danielochuba/projects/7/views/1)
+- Initial State.
+  ![image](https://github.com/ahmedeid6842/book_an_appointment_frontend/assets/128397949/7f394073-b7c7-4b15-a0f7-944f9119359c)
+- 3 People on this team.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
