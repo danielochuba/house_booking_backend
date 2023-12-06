@@ -1,8 +1,3 @@
-databases:
-  - name: postgres
-    ipAllowList: []
-    plan: free
-
 services:
   - type: web
     name: house-booking
@@ -15,10 +10,16 @@ services:
         sync: false
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: postgres  # Use the existing PostgreSQL database provisioned on Render
           property: connectionString
+
   - type: redis
     name: redis
     ipAllowList: []
     plan: free
     maxmemoryPolicy: noeviction
+    envVars:
+      - key: REDIS_URL
+        fromDatabase:
+          name: postgres  # Use the same PostgreSQL database for Redis
+          property: redisURL
