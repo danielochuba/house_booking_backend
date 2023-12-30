@@ -93,7 +93,7 @@ Link: [Front end](https://github.com/ahmedeid6842/book_an_appointment_frontend)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [lIVE DEMO](https://houses-booking-8105175e8e55.herokuapp.com/)
+- [lIVE DEMO](https://house-booking-bbvc.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
